@@ -1,0 +1,373 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@300;400;500;700;900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", "sans-serif";
+}
+
+body {
+    background-color: #C3BBC9;
+}
+
+body::-webkit-scrollbar {
+    width: 15px;
+}
+
+body::-webkit-scrollbar-track {
+    background: rgba(26, 8, 31, 90%);
+}
+
+
+body::-webkit-scrollbar-thumb {
+    background-color: #C3BBC9;
+    border-radius: 20px;
+    border: 3px solid rgba(26, 8, 31, 90%);
+    ;
+}
+
+
+#containerGrid {
+    grid-template-columns: 100vw;
+    grid-template-rows: 73px auto 100px;
+    grid-template-areas:
+        'cabecalo'
+        'corpo'
+        'rodape'
+    ;
+}
+
+
+
+
+#cabecalho {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    grid-area: cabecalho;
+    position: fixed;
+    top:0;
+}
+#opcoes {
+    display: flex;
+    width: 100vw;
+    height: 73px;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(26, 8, 31, 90%);
+}
+
+#containerOpcoes {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    align-items: center;
+}
+
+#containerOpcoes>img {
+    margin-left: 1%;
+    width: 50px;
+    height: 50px;
+    transform: rotate(390deg);
+    transition: 1.5s;
+}
+
+#containerOpcoes>img:hover {
+    transform: rotate(120deg)
+}
+
+#containerOpcoes h1 {
+    color: white;
+    margin-right: auto;
+    margin-left: 1%;
+    font-family: "Press Start 2P";
+    font-size: 32px;
+    transition: 0.4s;
+}
+
+#containerOpcoes h1:hover {
+    color: #C3BBC9;
+}
+
+#containerOpcoes a {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 40px;
+    transition: 0.5s;
+    opacity: 0.9;
+}
+
+#containerOpcoes a img {
+    width: 35px;
+    height: 35px;
+    transition:0.5s;
+}
+#containerOpcoes a:hover img{
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+#corpo {
+    grid-area: corpo;
+    overflow: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 73px 0 50px 0;
+}
+
+#containerCorpo{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.titulo{
+    color:white;
+    font-size: 64px;
+    margin-top: 10px;
+    /* border-bottom: 1px solid rgba(26, 8, 31, 90%); */
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: rgba(26, 8, 31, 100%);
+}
+
+
+.conteinerParte{
+    /* margin-top: 10px; */
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap:50px;
+    flex-direction: row-reverse;
+    border-bottom: 3px solid rgba(26, 8, 31, 90%);
+}
+
+.conteinerParte h1{
+    font-size:40px;
+}
+
+.conteinerParte h1 span{
+    font-family: "Press Start 2p";
+    font-size: 30px;
+    color:white;
+}
+#mapa{
+    border: 7px solid rgba(26, 8, 31, 90%);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#mapa iframe{
+    
+    border-radius: 13px;
+}
+#imagemETexto{
+    text-align: center;
+}
+#imagemETexto h1{
+    font-size: 32px;
+}
+
+
+#ultimaParte{
+    border:none;
+}
+#ultimaParte h1{
+    border-bottom: 3px solid white;
+}
+
+#rodape {
+    width: 100%;
+    background-color: rgba(26, 8, 31, 90%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0px;
+    flex-direction: column;
+    grid-area: rodape;
+    position: relative;
+    bottom: 0;
+}
+
+#formasDePagamento {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+#btnVerMais {
+    position: absolute;
+    top: 0;
+    background-color: #4d1d4d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 0 30px 30px;
+    transition: 1s;
+}
+
+#verMais {
+    background-color: #4d1d4d;
+    color: white;
+    border: none;
+    font-size: 15px;
+    cursor: pointer;
+    padding: 2px 30px;
+    border-radius: 0 0 30px 30px;
+}
+
+#verMais img {
+    margin-left: 5px;
+    height: 12px;
+}
+
+#formasDePagamento h2 {
+    color: white;
+    margin-bottom: 10px;
+}
+
+#formasDePagamento_img {
+    margin-right: auto;
+    padding: 5px 10px;
+    background-color: white;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#formasDePagamento_img img {
+    margin: 0px 15px;
+
+}
+
+#redesSociais_ajuda {
+    /* margin-top: 30px; */
+    width: 80%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+#redesSociais {
+
+    margin-right: auto;
+}
+
+#redesSociais a img {
+    width: 40px;
+    margin: 5px;
+}
+
+#ajuda {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#ajuda button {
+    border-radius: 40px;
+    border: none;
+    padding: 5px 25px;
+    background-color: #05676E;
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 400;
+    transition: 0.3s;
+}
+
+#ajuda button:hover {
+    background-color: #034c52;
+}
+
+@media only screen and (max-width: 1180px) {
+    #formasDePagamento_img {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+
+    .conteinerParte h1{
+        font-size:30px;
+    }
+
+    iframe{
+        height: 400px;
+        width: 400px;
+    }
+    .conteinerParte img{
+        height: 400px;
+    }
+
+}
+@media only screen and (max-width: 1020px) {
+
+    .conteinerParte h1{
+        font-size:25px;
+    }
+    .conteinerParte h1 span{
+        font-size: 20px;
+    }
+
+}
+
+@media only screen and (max-width: 900px) {
+    .titulo{
+        font-size: 50px;
+    }
+    .conteinerParte h1{
+        font-size:20px;
+    }
+    .conteinerParte h1 span{
+        font-size: 17px;
+    }
+    .conteinerParte img{
+        height: 300px;
+    }
+    #imagemETexto h1{
+        font-size: 25px;
+    }
+}
+
+@media only screen and (max-width: 760px) {
+    iframe{
+        height: 300px;
+        width: 300px;
+    }
+
+    .conteinerParte{
+        gap:20px;
+    }
+}
+
+
+@media only screen and (max-width: 680px) {
+
+    .conteinerParte img{
+        height: 250px;
+    }
+    .conteinerParte h1{
+        font-size:15px;
+    }
+    #imagemETexto h1{
+        font-size: 18px;
+    }
+    .conteinerParte h1 span{
+        font-size: 12px;
+    }
+}

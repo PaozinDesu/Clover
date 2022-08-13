@@ -1,0 +1,484 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@300;400;500;700;900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", "sans-serif";
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #4d1d4d;
+}
+body::-webkit-scrollbar{
+    width: 15px;
+}
+
+body::-webkit-scrollbar-track {
+    background: rgba(26, 8, 31, 90%);  }
+
+
+body::-webkit-scrollbar-thumb {
+        background-color: #C3BBC9;    
+        border-radius: 20px;       
+        border: 3px solid rgba(26, 8, 31, 90%); 
+      }
+#cabecalho {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    grid-area: cabecalho;
+}
+
+#opcoes {
+    display: flex;
+    width: 100vw;
+    height: 73px;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(26, 8, 31, 90%);
+}
+
+#containerOpcoes {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    align-items: center;
+}
+
+#containerOpcoes>img {
+    margin-left: 1%;
+    width: 50px;
+    height: 50px;
+    transform: rotate(390deg);
+    transition: 1.5s;
+}
+
+#containerOpcoes>img:hover {
+    transform: rotate(120deg)
+}
+
+#containerOpcoes h1 {
+    color: white;
+    margin-right: auto;
+    margin-left: 1%;
+    font-family: "Press Start 2P";
+    font-size: 32px;
+    transition: 0.4s;
+}
+
+#containerOpcoes h1:hover {
+    color: #C3BBC9;
+}
+
+#containerOpcoes a {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 40px;
+    transition:0.5s;
+    opacity: 0.9;
+}
+
+#containerOpcoes a img {
+    width: 35px;
+    height: 35px;
+    transition:0.5s;
+}
+#containerOpcoes a:hover img{
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+#corpo{
+    width: 100%;
+    display: flex;
+    height: 100%;
+    /* background-color: red; */
+    flex-direction: column;
+    align-items: center;
+}
+
+#container .control img{
+height: 30px;
+}
+
+#qiqi{
+    margin-top: 50px;
+    height:100%;
+}
+#backgrouns{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #4d1d4d;
+    height: 400px;
+    position: relative;
+}
+
+#backgrouns h1{
+    position: absolute;
+    color:white;
+    font-family: "Press Start 2P";
+    top:10px;
+
+}
+
+
+#container{
+    margin-top:40px;
+    position:relative;
+    max-width: 80%;
+    padding: 15px;
+    height: 100%;
+    background-color: #4d1d4d;
+    border-radius: 20px;
+}
+
+#imagem-wrapper{
+    overflow-x: auto;
+}
+#imagem-wrapper::-webkit-scrollbar{
+    display: none;
+}
+#imagem{
+    display: flex;
+    flex-flow: row nowrap;
+    gap:30px;
+}
+
+.left-arrow,
+.right-arrow{
+    position:absolute;
+    top:90px;
+    left:0;
+    right:auto;
+    bottom:110px;
+    width: 40px;
+    line-height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor:pointer;
+    background: linear-gradient(to left, rgba(26, 8, 31, 60%), rgba(26, 8, 31, 90%));
+    border:1px solid rgba(26, 8, 31, 40%);
+    opacity: 0.5;
+    transition: all 500ms ease-in-out;
+    z-index: 1;
+}
+
+.right-arrow{
+    background: linear-gradient(to right, rgba(26, 8, 31, 60%), rgba(26, 8, 31, 90%));
+    left:auto;
+    right:0;
+}
+
+.left-arrow:hover,
+.right-arrow:hover{
+    opacity: 1;
+}
+
+.item{
+    opacity: 0.5;
+    flex-shrink: 0;
+    transition: all 600ms ease-in-out;
+    height: 330px;
+    background-color: white;
+    padding:10px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 8px rgb(0 0 0 / 10%);
+    max-width: 500px;
+    object-fit: cover;
+}
+
+.imagem-exibida{
+opacity:1;
+box-shadow: 0px 2px 8px rgb(26 8 31 / 40%);
+transform: scale(1.001);
+height: 360px;
+}
+
+
+
+.itemContiner{
+    position:relative;
+}
+
+
+.itemContiner .button-Comprar{
+    padding: 5px 20px;
+    border-radius: 15px;
+    font-size:18px;
+    font-weight: 700;
+    background-color: #05676E;
+    color:white;
+    border:none;
+    transition: 0.3s;
+    position:absolute;
+    top:10px;
+    left:10px;
+    opacity: 0.5;
+    cursor:pointer;
+}
+.button-opacity{
+    opacity:1;
+}
+
+.itemContiner .button-Comprar:hover{
+    opacity:1;
+}
+
+.itemContiner .remover{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius:20px;
+    background-color: #05676E;
+    border:none;
+    height:30px;
+    width: 30px;
+    transition: 0.3s;
+    opacity: 0.5;
+    position:absolute;
+    top:10px;
+    right:10px;
+    cursor:pointer;
+}
+
+.itemContiner .remover:hover{
+    opacity:1;
+}
+ .remover img{
+    height:38px;
+}
+
+
+
+
+.oferta {
+    width: 100%;
+    height: 22vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.containerOferta {
+    background-color: rgba(26, 8, 31, 100%);
+    width: 100%;
+    height: 100%;
+    border-top: 10px solid #034c52;
+    border-bottom: 10px solid #034c52;
+    color: white;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    z-index: -1;
+    text-align: center;
+
+}
+
+.containerOferta img {
+    /* margin: 0 auto; */
+    height: 100px;
+    opacity: 90%;
+}
+
+.containerOferta #Chaveiro1 {
+    position: absolute;
+    top: 5%;
+    right: 16%;
+}
+
+.containerOferta #Chaveiro2 {
+    position: absolute;
+    top: 25%;
+    right: 9%;
+}
+
+.containerOferta #Chaveiro3 {
+    position: absolute;
+    top: 11%;
+    right: 2.5%;
+}
+
+.containerOferta #Chaveiro4 {
+    position: absolute;
+    left: 2.5%;
+}
+
+.containerOferta #Chaveiro5 {
+    position: absolute;
+    left: 9%;
+    top: 30%;
+    height: 50px;
+    z-index: 0;
+    transform: rotate(-30deg);
+}
+
+
+.containerOferta #Chaveiro6{
+    position: absolute;
+    left: 20%;
+    bottom:2%;
+} 
+
+.containerOferta #Chaveiro7{
+    position: absolute;
+    right: 21%;
+    bottom:5%;
+    height: 80%;
+} 
+
+
+.containerOferta h1 {
+    margin: 0 auto;
+    font-size: 2.2em;
+    z-index: 1;
+    -webkit-text-stroke-width: 1.2px;
+    -webkit-text-stroke-color: #000;
+}
+
+.containerOferta h1 span {
+    color: red;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#rodape {
+    width: 100%;
+    background-color: rgba(26, 8, 31, 90%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0px;
+    flex-direction: column;
+    grid-area: rodape;
+    position: fixed;
+    bottom: 0;
+}
+
+#formasDePagamento {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+#btnVerMais {
+    position: absolute;
+    top: 0;
+    background-color: #4d1d4d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 0 30px 30px;
+    transition: 1s;
+}
+
+#verMais {
+    background-color: #4d1d4d;
+    color: white;
+    border: none;
+    font-size: 15px;
+    cursor: pointer;
+    padding: 2px 30px;
+    border-radius: 0 0 30px 30px;
+}
+
+#verMais img {
+    margin-left: 5px;
+    height: 12px;
+}
+
+#formasDePagamento h2 {
+    color: white;
+    margin-bottom: 10px;
+}
+
+#formasDePagamento_img {
+    margin-right: auto;
+    padding: 5px 10px;
+    background-color: white;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#formasDePagamento_img img {
+    margin: 0px 15px;
+
+}
+
+#redesSociais_ajuda {
+    /* margin-top: 30px; */
+    width: 80%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+#redesSociais {
+
+    margin-right: auto;
+}
+
+#redesSociais a img {
+    width: 40px;
+    margin: 5px;
+}
+
+#ajuda {
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#ajuda button {
+    border-radius: 40px;
+    border: none;
+    padding: 5px 25px;
+    background-color: #05676E;
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 400;
+    transition: 0.3s;
+}
+
+#ajuda button:hover {
+    background-color: #034c52;
+}
+
+@media only screen and (max-width: 1180px) {
+    #formasDePagamento_img {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+}
